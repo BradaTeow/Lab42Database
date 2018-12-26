@@ -22,21 +22,21 @@ public class UserRepository {
         return allUsers;
     }
 
-    public void insertUser(User user){
-        new insertAsyncTask(userDao).execute(user);
+    public void deleteAll(User user){
+        new deleteAllAsyncTask(userDao).execute(user);
     }
 
     //<Param, Progress, Results>
-    private static class insertAsyncTask extends AsyncTask<User, Void, Void> {
+    private static class deleteAllAsyncTask extends AsyncTask<User, Void, Void> {
         private UserDao userDao;
 
-        public insertAsyncTask(UserDao userDao) {
+        public deleteAllAsyncTask(UserDao userDao) {
             this.userDao = userDao;
         }
 
         @Override
         protected Void doInBackground(User... users) {
-            userDao.insertUser(users[0]);
+            userDao.deleteUser(users[0]);
             return null;
         }
     }

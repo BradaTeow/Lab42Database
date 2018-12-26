@@ -25,7 +25,7 @@ public class UserViewModel extends AndroidViewModel {
         return allUsers;
     }
 
-    public  void insertUser(User user){
-        userRepository.insertUser(user);
+    public  void deleteUser(User user){
+        userRepository.deleteAll(user);
     }
 }

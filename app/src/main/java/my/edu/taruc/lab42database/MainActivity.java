@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
             user.setFirstName(data.getStringExtra(InsertActivity.INSERT_FIRST));
             user.setLastName(data.getStringExtra(InsertActivity.INSERT_LAST));
             user.setPhone(data.getStringExtra(InsertActivity.INSERT_PHONE));
-            userViewModel.insertUser(user);
+            userViewModel.deleteUser(user);
         }else{
             Toast.makeText(
                     getApplicationContext(),
