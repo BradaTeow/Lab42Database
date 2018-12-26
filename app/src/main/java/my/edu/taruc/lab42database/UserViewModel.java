@@ -21,6 +21,9 @@ public class UserViewModel extends AndroidViewModel {
         allUsers = userRepository.getAllUsers();
     }
 
+    public static void deleteWord(User myWord) {
+    }
+
     public LiveData<List<User>> getAllUsers() {
         return allUsers;
     }
@@ -28,4 +31,5 @@ public class UserViewModel extends AndroidViewModel {
     public  void deleteUser(User user){
         userRepository.deleteAll(user);
     }
+
 }

@@ -52,5 +52,7 @@ public class User {
     }
 
 
-
+    public static int getWord() {
+        return 0;
+    }
 }

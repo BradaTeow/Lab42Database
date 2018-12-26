@@ -12,6 +12,10 @@ import java.util.List;
 
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder> {
 
+    public User getWordAtPosition(int position) {
+        return null;
+    }
+
     public class UserViewHolder extends RecyclerView.ViewHolder {
         private final TextView textViewFirstName, textViewLastName, textViewPhone;
 
@@ -61,5 +65,9 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
     public void setUsers(List<User> users){
         userList = users;
         notifyDataSetChanged();
+    }
+
+    public User getUserAtPosition (int position) {
+        return userList.get(position);
     }
 }
